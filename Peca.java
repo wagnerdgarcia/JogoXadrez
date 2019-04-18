@@ -8,11 +8,11 @@
  */
 public abstract class Peca {
     private Casa casa;
-    private boolean tipo;
+    private boolean cor;
 
-    public Peca(Casa casa, boolean tipo) {
+    public Peca(Casa casa, boolean cor) {
         this.casa = casa;
-        this.tipo = tipo;
+        this.cor = cor;
         casa.colocarPeca(this);
     }
     
@@ -25,14 +25,28 @@ public abstract class Peca {
     /**
      * retorna o tipo da peca.
      */
-    public boolean getTipo() {
-        return tipo;
-    }
+    public abstract int getTipo();
     
     /**
      * retorna o tipo da peca.
      */
     public Casa getCasa() {
         return casa;
+    }
+    
+    /**
+     * retorna o tipo da peca.
+     */
+    public boolean getCor() {
+        return cor;
+    }
+    
+    /**
+     * Realiza o Movimento Basico
+     */
+    public void movimentoBasico(Casa destino){
+        casa.removerPeca();
+        destino.colocarPeca(this);
+        casa = destino;            
     }
 }

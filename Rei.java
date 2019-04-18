@@ -15,10 +15,17 @@ public class Rei extends Peca
     }
     
     /**
+     * retorna o tipo da peca.
+     */
+    public int getTipo(){
+        return 5;
+    }
+    
+    /**
      * Movimenta a peca para uma nova casa.
      * @param destino nova casa que ira conter esta peca.
      */
-    public void mover(Casa destino){
+    public void mover(Casa destino, Jogo jogo){
         ;
     }
 }

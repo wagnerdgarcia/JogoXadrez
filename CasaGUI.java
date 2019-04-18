@@ -23,7 +23,7 @@ public class CasaGUI extends JButton {
     
     // Icones das pecas
     private static final Icon PEAO_BRANCO = new ImageIcon("imagens/peao_branco.png");
-    private static final Icon TORRE_BRANCO = new ImageIcon("imagens/torre_branco.png");
+    private static final Icon TORRE_BRANCO = new ImageIcon("imagens/torre_branca.png");
     private static final Icon CAVALO_BRANCO = new ImageIcon("imagens/cavalo_branco.png");
     private static final Icon BISPO_BRANCO = new ImageIcon("imagens/bispo_branco.png");
     private static final Icon RAINHA_BRANCO = new ImageIcon("imagens/rainha_branco.png");

@@ -8,9 +8,13 @@
 public class Jogo {
 
     private Tabuleiro tabuleiro;
-
+    private Jogador jogador1;
+    private Jogador jogador2;
+    
     public Jogo() {
         tabuleiro = new Tabuleiro();
+        jogador1 = new Jogador();
+        jogador2 = new Jogador();
         criarPecas();
     }
     
@@ -19,7 +23,28 @@ public class Jogo {
      * Utilizado na inicializa�ao do jogo.
      */
     private void criarPecas() {
+        for (int x = 0; x < 8; x++){
+            Casa casa = tabuleiro.getCasa(x, 1);
+            Peca peca = new Peao(casa, true);
+            jogador1.addPeca(peca);
+        }
+        for (int x = 0; x < 8; x++){
+            Casa casa = tabuleiro.getCasa(x, 6);
+            Peca peca = new Peao(casa, false);
+            jogador2.addPeca(peca);
+        }
         
+        Casa casaTorreB1 = tabuleiro.getCasa(0, 0);
+        Peca torreB1 = new Torre(casaTorreB1, true);
+        jogador1.addPeca(torreB1);
+        
+        Casa casaTorreB2 = tabuleiro.getCasa(0, 7);
+        Peca torreB2 = new Torre(casaTorreB2, true);
+        jogador1.addPeca(torreB2);
+        
+        
+        System.out.println("Jogador 1" + jogador1.getPecas());
+        System.out.println("Jogador 2" + jogador2.getPecas());
     }
     
     /**

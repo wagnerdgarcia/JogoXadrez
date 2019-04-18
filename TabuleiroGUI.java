@@ -80,6 +80,15 @@ public class TabuleiroGUI extends JPanel {
                 Casa casa = tabuleiro.getCasa(x, y);
                 if (casa.possuiPeca()) {
                     Peca peca = casa.getPeca();
+                    if ((peca.getTipo() == 1) && (peca.getCor())){
+                        casaGUI.desenharPeaoBranco();
+                    }
+                    else if ((peca.getTipo() == 1) && (!peca.getCor())){
+                        casaGUI.desenharPeaoPreto();
+                    }
+                    else if ((peca.getTipo() == 2) && (peca.getCor())){
+                        casaGUI.desenharTorreBranco();
+                    }
                 }
                 else {
                     casaGUI.apagarPeca();
